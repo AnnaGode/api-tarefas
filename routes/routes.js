@@ -32,7 +32,11 @@ router.get('/getAll', async (req, res) => {
 router.delete('/delete/:id', async (req, res) => {
     try {
         const resultado = await modeloTarefa.findByIdAndDelete(req.params.id)
-        res.json(resultado)
+        res.json({
+            nome:"Anna Gode",
+            ra: "256128",
+            tarefas:tarefas
+         } )
     }
     catch (error) {
         res.status(400).json({ message: error.message })
