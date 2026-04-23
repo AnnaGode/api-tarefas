@@ -14,7 +14,7 @@ export class App {
   arrayDeTarefas = signal<Tarefa[]>([]);
   apiURL: string;
   constructor(private http: HttpClient) {
-    this.apiURL = 'https://api-tarefas-anna256128-.onrender.com';
+    this.apiURL = 'https://api-tarefas-anna256128.onrender.com';
     this.READ_tarefas();
   }
 
